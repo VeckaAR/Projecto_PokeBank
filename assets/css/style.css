@@ -1,0 +1,55 @@
+.imgbanner{
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.h1{
+    padding-top: 10px;
+}
+
+.heading{
+    padding-bottom: 5px;
+}
+
+.textinfo{
+    font-size: 20px;
+}
+
+.logoheader{
+    width: 150px;
+    height: 50px;
+}
+
+.cajero{
+    height: 200px !important;
+}
+
+.logologinpoke{
+    width: 300px;
+    height: 200px;
+   
+}
+
+.formcenter{
+   text-align: center;
+   
+  align-items: center;
+  justify-content: center;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.tablaTrans{
+    align-items: center;
+}
+.td{
+    text-align: center !important;
+}
+
+.infoSaldo{
+    text-align: center;
+}

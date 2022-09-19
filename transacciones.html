@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Transacciones</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+    <nav class="navbar mb-5 ml-auto navbar-dark navbar-expand-lg fixed-top text-secondary bg-white portfolio-navbar gradient">
+        <div class="container"><a class="brand  logo" href="index.html"><strong><img class="logoheader"  src="./assets/img/headerlogo.png" alt=""></strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class=" justify-content-end collapse navbar-collapse" id="navbarNav">
+                <ul class=" nav navbar-nav justify-content-center">
+                   
+                    <li class="nav-item"><a class="nav-link active fs-5 btn-info btn" href="#">Mostrar Grafica de Transacciones </a></li>
+                    
+                </ul><a href="login.html"><button class="btn btn-danger link-secondary text-bg-primary fs-3" type="button"><strong><span style="color: rgb(214, 7, 7);">Cerrar Sesion</span></strong></button></a>
+            </div>
+        </div>
+    </nav>
+    <main class="page projects-page ">
+
+
+        <div class=" mt-3 mb-3 shadow container col-md-8 d-flex aling-text-center">
+            <div class="row col-md-6">
+                <h2 class="aling-text-center">Bienvenido</h2>
+                <h4 id="nombreCliente" ></h4>
+                <h4 id="numeroDeCuenta"></h4>
+            </div>
+            <div class=" infoSaldo col-md-5 shadow-sm bg-primary text-white mb-2   align-items-center" >
+                <h3><u> Su Saldo Actual</u></h3>
+                <h2 id="SaldoActu" > </h2>
+            </div>
+        </div>
+
+
+
+    <div class="container ">
+    <div class="mt-5 pb-5 row d-flex justify-content-between ">
+        <div class="col-md-4 border shadow">
+      
+
+    <form class="formcenter pb-2 shadow-sm p-3 mb-1 bg-body rounded" id="retiro">
+        <input type="text" id="valorRetiro" required="true" >
+        <input class="btn btn-success" type="button" id="btnretiro" onclick="retirar();" value="retirar">
+    </form>
+    <br>
+    <form class="formcenter pb-2 shadow-sm p-3 mb-1 bg-body rounded" id="deposito">
+        <input type="text" id="valorDeposito" placeholder=0>
+        <input class="btn btn-success" type="button" id="btndeposito" onclick="depositar();" value="depositar">
+    </form>
+    <br>
+    <form  class="formcenter pb-2 shadow-sm p-3 mb-1 bg-body rounded" id="pago">        
+        <h5 >
+            Seleccione el servicio a pagar: </h5>
+            <select class="form-select Default select example" id="servicios" name="Servicios">
+              <option value="CAESS">CAESS</option>
+              <option value="ANDA">ANDA</option>
+              <option value="SERVICIO DE INTERNET Y TELEFONIA">SERVICIO DE INTERNET Y TELEFONIA</option>
+              </select>
+      
+        <input class="mt-2 " type="text" id="valorPago" placeholder="valor">
+        <input class="mb-2 btn btn-success" type="button" id="btnpago" onclick="pagar();" value="Pagar">
+    </form>
+        </div>
+
+        
+        
+        <div class="col-md-8 col-xs-12 mt-5 row"> 
+            
+        <div class=" row  align-items-center shadow tablaTran col-xs-12 ">
+            <h2 class="aling-text-center">Historial de Transacciones</h2>
+            <table id="tabla_transaccion" class="table table-striped col-xs-4">
+                <thead>
+                    <td> <b>Usuario</b> </td>
+                    <td><b>Tipo Tansacción</b></td>
+                    <td><b>Valor de Transaccion</b></td>
+                    <td><b>Saldo Actual</b></td>
+                    <td><b>Detalle de Transacción</b></td>
+                </thead>        
+                <tbody id="tbody" class="tabTrans table table-striped col-xs-12  ">
+        
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+    
+    </div>
+   
+    </div>
+</main>
+   
+
+</body>
+<script src="./assets/js/usuriaios.js"></script>
+<script src="./assets/js/transacciones.js"></script>
+</html>

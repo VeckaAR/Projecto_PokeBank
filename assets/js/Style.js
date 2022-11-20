@@ -1,27 +1,18 @@
-
-//var pswd = [1244,1234];
-
-var formulario = document.getElementById('formcenter')[0],
-elementos = formulario.elements;
-boton = document.getElementById('btn');
-
-var validarPin = function(){
-    
-    for(var user in usuarios ){
-        if (formulario.pin.value == usuarios[user][1]) {
-
-            alert("entro"+ usuarios[user]);
-        
+function validate() {
+    var pin=document.getElementById('pin').value;
+    if(pin === "0" || pin ==="" ){ 
+        swal("Operación incompleta", "Por Favor digite un PIN para inisiar sesion", "warning");
+    }
+    else{
+        if (pin=="1234"){
+            window.location.href="../transacciones.html?pin=1234";
+            
         }
         else{
-            alert("No es el pin");
-            return;
+            swal("PIN invalido", "Ingrese otro PIN y vuelva a intentarlo", "error");
+             
         }
-    return;
     }
+   
 }
-var validar = function(){
-    validarPin();
-}
-formulario.addEventListener("submit", validar);
-
+    

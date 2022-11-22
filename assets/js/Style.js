@@ -5,7 +5,7 @@ function validate() {
     }
     else{
         if (pin=="1234"){
-            window.location.href="../transacciones.html?pin=1234";
+            window.location.href="transacciones.html?pin=1234";
             
         }
         else{
